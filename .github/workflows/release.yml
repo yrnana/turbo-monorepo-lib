@@ -33,7 +33,7 @@ jobs:
       - name: Install
         run: pnpm install
 
-      - name: Publish
+      - name: Publish or create Pull Request
         id: changesets
         uses: changesets/action@v1
         with:
