@@ -1,0 +1,8 @@
+{
+  "extends": ["@yrnana/typedoc"],
+  "name": "turbo-monorepo-lib",
+  "entryPointStrategy": "packages",
+  "entryPoints": ["packages/*"],
+  "out": "./apps/docs",
+  "plugin": ["typedoc-plugin-mdn-links", "typedoc-plugin-missing-exports"]
+}

@@ -1,0 +1,4 @@
+{
+  "extends": "@yrnana/tsconfig/library.json",
+  "include": ["src"]
+}

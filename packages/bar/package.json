@@ -1,0 +1,35 @@
+{
+  "name": "@yrnana/bar",
+  "version": "0.0.0",
+  "license": "MIT",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/bar.cjs",
+      "import": "./dist/bar.mjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "main": "./dist/bar.cjs",
+  "module": "./dist/bar.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist/**"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
+    "lint": "eslint ."
+  },
+  "devDependencies": {
+    "@types/node": "^20.6.0",
+    "@yrnana/eslint-config": "workspace:*",
+    "@yrnana/tsconfig": "workspace:*",
+    "@yrnana/tsup": "workspace:*",
+    "tsup": "7.2.0",
+    "typescript": "^5.2.2"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

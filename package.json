@@ -1,0 +1,48 @@
+{
+  "name": "turbo-monorepo-lib",
+  "private": true,
+  "scripts": {
+    "build": "turbo build --filter=!demo",
+    "build:demo": "turbo build --filter=demo",
+    "changeset": "changeset",
+    "clean": "turbo clean",
+    "dev": "turbo dev --filter=demo",
+    "format": "prettier --check \"**/*.{ts,tsx,md,css,scss,html}\"",
+    "format:fix": "prettier --write \"**/*.{ts,tsx,md,css,scss,html}\"",
+    "lint": "turbo lint --filter=!demo",
+    "release": "pnpm build && changeset publish",
+    "test": "turbo test --filter=!demo",
+    "typecheck": "turbo typecheck --filter=!demo",
+    "version-packages": "changeset version"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.26.2",
+    "@yrnana/tsconfig": "workspace:*",
+    "eslint": "^8.48.0",
+    "prettier": "^3.0.3",
+    "prettier-plugin-packagejson": "^2.4.5",
+    "turbo": "^1.10.13",
+    "typedoc": "^0.25.1",
+    "typedoc-plugin-mdn-links": "^3.1.0",
+    "typedoc-plugin-missing-exports": "^2.1.0",
+    "typescript": "^5.2.2"
+  },
+  "packageManager": "pnpm@8.6.10",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "pnpm": {
+    "peerDependencyRules": {
+      "ignoreMissing": [
+        "esbuild"
+      ]
+    },
+    "packageExtensions": {
+      "bundle-require": {
+        "dependencies": {
+          "esbuild": "0.19.2"
+        }
+      }
+    }
+  }
+}

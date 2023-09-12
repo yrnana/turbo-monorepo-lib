@@ -1,0 +1,3 @@
+{
+  "extends": "@yrnana/tsconfig/base.json"
+}

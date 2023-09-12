@@ -1,0 +1,4 @@
+{
+  "extends": "@yrnana/tsconfig/vite.json",
+  "include": ["src", "vite.config.ts"]
+}

@@ -1,0 +1,23 @@
+{
+  "name": "@yrnana/tsup",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
+  },
+  "devDependencies": {
+    "@types/node": "^20.6.0",
+    "@yrnana/tsconfig": "workspace:*",
+    "esbuild-sass-plugin": "^2.15.0",
+    "postcss": "^8.4.29",
+    "postcss-modules": "^6.0.0",
+    "tsup": "7.2.0",
+    "typescript": "^5.2.2"
+  }
+}
