@@ -26,6 +26,9 @@ jobs:
         with:
           version: 8
 
+      - name: Install
+        run: pnpm install
+
       - name: Publish
         id: changesets
         uses: changesets/action@v1
