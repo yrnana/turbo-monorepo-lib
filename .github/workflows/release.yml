@@ -13,9 +13,7 @@ jobs:
     name: Release
     runs-on: ubuntu-latest
 
-    permissions:
-      contents: write
-      packages: write
+    permissions: write-all
 
     steps:
       - name: Checkout Repo
