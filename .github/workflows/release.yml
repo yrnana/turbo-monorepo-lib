@@ -21,8 +21,10 @@ jobs:
           node-version: 18.x
           registry-url: 'https://npm.pkg.github.com'
 
-      - name: Install Dependencies
-        run: pnpm i
+      - uses: pnpm/action-setup@v3
+        name: Install pnpm
+        with:
+          version: 8
 
       - name: Publish
         id: changesets
