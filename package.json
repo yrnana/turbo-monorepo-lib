@@ -12,8 +12,7 @@
     "lint": "turbo lint --filter=!demo",
     "release": "pnpm build && changeset publish",
     "test": "turbo test --filter=!demo",
-    "typecheck": "turbo typecheck --filter=!demo",
-    "version-packages": "changeset version"
+    "typecheck": "turbo typecheck --filter=!demo"
   },
   "devDependencies": {
     "@changesets/changelog-github": "^0.4.8",
