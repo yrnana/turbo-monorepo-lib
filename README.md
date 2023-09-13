@@ -1,4 +1,14 @@
-# Turborepo + library example
+# Turborepo + library publish
+
+터보레포로 라이브러리 배포
+
+## Install
+
+```sh
+pnpm install
+```
+
+## Build
 
 ```sh
 pnpm build
@@ -10,13 +20,15 @@ pnpm build
 pnpm dev
 ```
 
-## Useful Links
+## Release
 
-Learn more about the power of Turborepo:
+Github Action을 통한 자동 배포
 
-- [Tasks](https://turbo.build/repo/docs/core-concepts/monorepos/running-tasks)
-- [Caching](https://turbo.build/repo/docs/core-concepts/caching)
-- [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching)
-- [Filtering](https://turbo.build/repo/docs/core-concepts/monorepos/filtering)
-- [Configuration Options](https://turbo.build/repo/docs/reference/configuration)
-- [CLI Usage](https://turbo.build/repo/docs/reference/command-line-reference)
+1. 로컬에서 버저닝 후 커밋, 푸쉬
+
+```sh
+pnpm changeset
+```
+
+2. 액션에서 PR Create
+3. PR 머지되면 액션에서 Publish

@@ -1,3 +1,7 @@
-# `@turbo/eslint-config`
+# @yrnana/eslint-config
 
-Collection of internal eslint configurations.
+```js
+module.exports = {
+  extends: ['@yrnana/eslint-config/library'],
+};
+```
