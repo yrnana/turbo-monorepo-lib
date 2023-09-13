@@ -4,6 +4,7 @@
   "scripts": {
     "build": "turbo build --filter=!demo",
     "build:demo": "turbo build --filter=demo",
+    "build:docs": "typedoc",
     "changeset": "changeset",
     "clean": "turbo clean",
     "dev": "turbo dev --filter=demo",
